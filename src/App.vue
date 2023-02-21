@@ -12,6 +12,15 @@
             </v-avatar>
             <h2 class="indigo--text">Vue login page</h2>
           </div>
+          <v-form>
+            <v-card-text>
+              <v-text-field 
+                type="email" 
+                label="Email" 
+                placeholder="Email" 
+              />
+            </v-card-text>
+          </v-form>
         </v-card>
       </v-col>
     </v-main>
