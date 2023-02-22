@@ -16,8 +16,18 @@
             <v-card-text>
               <v-text-field 
                 type="email" 
-                label="Email" 
-                placeholder="Email" 
+                label="E-mail" 
+                placeholder="Email"
+                prepend-inner-icon="md-account" 
+              />
+              <v-text-field 
+                :type="passwordShow? 'text' : 'password'" 
+                label="Password" 
+                placeholder="Password"
+                prepend-inner-icon="mdi-key" 
+                :append-icon="passwordShow ? 'mdi-eye': 'mdi-eye-off'"
+                @click:append="passwordShow = !passwordShow"
+                      required
               />
             </v-card-text>
           </v-form>
@@ -38,14 +48,14 @@ export default {
   },
 
   data: () => ({
-    //
+    passwordShow:false
   }),
 };
 </script>
 
 <style>
   .background{
-    background-image: url(./assets/login.svg) !important;
+    background-image: url(./assets/Order-Banner.jpg) !important;
     height: 300px;
     width: 100%;
     display: flex;
